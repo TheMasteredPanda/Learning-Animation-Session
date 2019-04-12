@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 100%;
+    height: auto;
+    min-height: 60px; 
+    background: #125748;
+    margin-top: 0;
+    padding-top: 1%;
+    align-items: center;
+    padding-left: 1%;
+    flex-flow: wrap;
+    margin-bottom: 0;
+    
+
+    li {
+        background: #4C8D7E;
+        margin-right: .8%;
+        margin-bottom: .8%;
+        padding: 15px;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        transition: 0.4s;
+
+        &:hover {
+            box-shadow: 5px 5px 5px #333;
+        }
+    }
+}
