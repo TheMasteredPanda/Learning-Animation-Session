@@ -39,7 +39,10 @@ gulp.task('bundle-js', function () {
     walk('src/scripts');
     scripts.sort((a, b) => {return a.includes('vendors') ? -1 : 1});
     console.log(`Scripts: ${scripts.join(', ')}`);
-    return gulp.src(scripts).pipe(concat('main.js')).pipe(minify({noSource: true})).pipe(gulp.dest('build/scripts'))
+    return gulp.src(scripts).pipe(concat('main.js'))
+    .pipe(minify({noSource: true}))
+    .pipe(gulp.dest('build/scripts'))
+    .pipe(browserSync.stream());
 })
 
 gulp.task('serve', gulp.series(gulp.parallel('sass', 'bundle-js'), function () {
@@ -49,7 +52,8 @@ gulp.task('serve', gulp.series(gulp.parallel('sass', 'bundle-js'), function () {
         port: 5500
     }});
 
-    gulp.watch('./src/styles', gulp.series('sass'))
+    gulp.watch('./src/styles', gulp.series('sass'));
+    gulp.watch('./src/scripts', gulp.series("bundle-js"));
     gulp.watch('./build/*').on('change', browserSync.reload);
 }));
 
