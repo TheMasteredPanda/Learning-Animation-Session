@@ -6,31 +6,147 @@
   </head>
   <body>
     <ul class="navbar">
-      <li container="ba1">Basic Animation 1</li>
-      <li container="ba2">Basic Animation 2</li>
-      <li container="ba3">Basic Animation 3</li>
+      <li class="navbar-button" container="ba1">Basic Transform Animations</li>
+      <li class="navbar-button" container="ba2">Basic Transitions</li>
+      <li class="navbar-button" container="ba3">Collapsable Navbars</li>
     </ul>
     <div class="container" id="ba1">
       <div class="compartment">
-        <h2 class="compartment-title">Skew</h2>
+        <h2 class="compartment-title">SkewX</h2>
+        <div id="skewx"></div>
+      </div>
+      <div class="compartment">
+        <h2 class="compartment-title">SkewY</h2>
+        <div id="skewy"></div>
       </div>
       <div class="compartment">
         <h2 class="compartment-title">Skew</h2>
+        <div id="skew"></div>
       </div>
       <div class="compartment">
-        <h2 class="compartment-title">Skew</h2>
+        <h2 class="compartment-title">RotateX</h2>
+        <div id="rotatex"></div>
       </div>
       <div class="compartment">
-        <h2 class="compartment-title">Skew</h2>
+        <h2 class="compartment-title">RotateY</h2>
+        <div id="rotatey"></div>
       </div>
       <div class="compartment">
-        <h2 class="compartment-title">Skew</h2>
+        <h2 class="compartment-title">RotateZ</h2>
+        <div id="rotatez"></div>
       </div>
       <div class="compartment">
-        <h2 class="compartment-title">Skew</h2>
+        <h2 class="compartment-title">Rotate</h2>
+        <div id="rotate"></div>
+      </div>
+      <div class="compartment">
+        <h2 class="compartment-title">TranslateX</h2>
+        <div id="translatex"></div>
+      </div>
+      <div class="compartment">
+        <h2 class="compartment-title">TranslateY</h2>
+        <div id="translatey"></div>
+      </div>
+      <div class="compartment">
+        <h2 class="compartment-title">Translate</h2>
+        <div id="translate"></div>
       </div>
     </div>
-    <div class="container" id="ba2"></div>
-    <div class="container" id="ba3"></div>
+    <div class="container" id="ba2">
+      <div class="compartment">
+        <h2 class="compartment-title">Hover Transition</h2>
+        <div id="hover-transition"></div>
+      </div>
+      <div class="compartment">
+        <h2 class="compartment-title">Toggle Transition</h2>
+        <div id="toggle-transition" class="gold-toggle"></div>
+        <div class="button-wrapper">
+          <button id="toggle-button">Toggle Button.</button>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="ba3">
+      <div class="navbar-compartment">
+        <h2 class="compartment-title">Collapsable Vertical Lists</h2>
+        <div class="standard-navbar">
+          <a class="entry" href="#home">Home</a>
+          <a class="entry" href="#forums">Forums</a>
+          <div
+            class="entry dropdown"
+            onmouseover="dropdown('dropdown-1');"
+            onmouseleave="foldDropdown('dropdown-1');"
+          >
+            <button class="dropdown-button">Misc</button>
+            <div id="dropdown-1" class="dropdown-content">
+              <a href="#misc1">Misc 1</a>
+              <a href="#misc2">Misc 2</a>
+              <a href="#misc3">Misc 3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-compartment" id="minimising-navbar">
+        <h2 class="compartment-title">Minimising Navbar</h2>
+        <div id="fake-window">
+          <div class="minimise sticky-navbar">
+            <div class="logo">
+              <img src="./images/crown.svg" />
+            </div>
+            <ul class="sticky-navbar-buttons">
+              <li>Home</li>
+              <li>Forums</li>
+              <li>Members</li>
+              <li>About</li>
+              <li id="transition-navbar-button">Transition Navbar</li>
+            </ul>
+          </div>
+          <p class="dummy-paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            tellus ex, malesuada a turpis sed, fermentum mattis ipsum. Vivamus
+            viverra eros id blandit scelerisque. Pellentesque tellus dolor,
+            mattis quis massa non, congue bibendum lorem. Proin commodo quam
+            lectus. Etiam a tristique massa. Suspendisse convallis augue quis
+            tellus tincidunt gravida. Etiam sagittis sit amet eros at
+            vestibulum. Duis sit amet tellus eget purus porta efficitur sit amet
+            vitae justo. Nam sed tellus vitae leo porttitor tempus. Nullam
+            ultricies posuere turpis aliquet fermentum. Curabitur sed ligula sit
+            amet massa tempor aliquam nec in velit. Duis sit amet mattis nisi.
+            Mauris vehicula mollis lorem, et suscipit massa commodo sit amet.
+            Vestibulum ultrices rutrum nisl sit amet dapibus. Sed et quam
+            ultrices, euismod lacus in, gravida magna. Vestibulum malesuada
+            sapien eget vehicula facilisis. Maecenas lacinia convallis pretium.
+            Vivamus convallis, erat sit amet elementum suscipit, velit arcu
+            eleifend quam, ac porta elit velit eu tortor. Aliquam mauris nisi,
+            convallis id viverra nec, cursus mollis magna. Fusce a nisi et neque
+            pretium ullamcorper. Pellentesque in mi vitae velit viverra vehicula
+            a eget sem. Pellentesque ligula enim, ornare ut aliquam nec,
+            volutpat non ex. Sed consequat lectus lectus, in egestas tellus
+            porta eget. Ut finibus dolor turpis, eget consequat risus vehicula
+            in. Proin bibendum nisl ut sagittis condimentum. Interdum et
+            malesuada fames ac ante ipsum primis in faucibus. Donec purus nisi,
+            dapibus vitae mi et, rutrum aliquam lorem. Ut ut dui faucibus,
+            molestie ex sit amet, mollis odio. Quisque semper tempus
+            sollicitudin. Cras arcu ex, blandit eu augue id, ornare vestibulum
+            lorem. Fusce vulputate mauris arcu, a porttitor diam eleifend nec.
+            Maecenas venenatis ut arcu et egestas. Sed aliquet tempor dolor eget
+            scelerisque. Ut non ultrices ipsum, ac laoreet neque. Pellentesque
+            ut lectus mauris. In non dolor mattis, sodales mi eu, ullamcorper
+            arcu. Suspendisse semper ex ac lorem hendrerit, eget rhoncus velit
+            rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Sed ac est urna. Vivamus scelerisque ut orci quis vehicula. Vivamus
+            nibh nulla, tincidunt ac venenatis vestibulum, ornare eu ligula. Ut
+            fringilla lectus sodales, consequat justo eu, fringilla ex. Sed
+            convallis vitae eros ac ultricies. Cras posuere faucibus orci, et
+            tempor diam. Vivamus et convallis tortor. Integer mi ipsum,
+            scelerisque in volutpat nec, eleifend aliquet massa. Integer feugiat
+            non odio eu fermentum. Nunc malesuada lacinia leo a aliquet. Donec
+            sem quam, fringilla non purus sit amet, accumsan viverra leo.
+            Curabitur consectetur pellentesque elit, sit amet porttitor quam
+            accumsan at. Mauris blandit sed mauris non mattis. Quisque vitae
+            laoreet orci. Duis venenatis eros non fermentum tempus.
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

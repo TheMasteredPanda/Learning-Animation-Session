@@ -1,0 +1,44 @@
+#ba2 {
+    display: none;
+}
+
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+#hover-transition {
+    @extend #translate;
+    animation: none;
+    transition: background ease-in-out 1s;
+
+    &:hover {
+        background: green;
+    }
+}
+
+
+.gold-toggle {
+    background: gold;
+}
+
+.black-toggle {
+    background: black;
+}
+
+#toggle-transition {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: 0 auto;
+    animation: none;
+    transition: all ease-in-out 1s;
+
+    #toggle-button {
+        width: 10%;
+        margin: 0 auto;
+        display: block;
+    }
+}
